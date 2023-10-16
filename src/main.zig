@@ -17,7 +17,11 @@ test "basic" {
     const c = createConsola(std.testing.allocator);
 
     std.debug.print("\n", .{});
-    std.debug.print("{any}\n", .{"ℹ"});
 
-    c.info("hello world");
+    c.info("Using consola 0.0.1");
+    c.start("Building project...");
+    c.warn("A new version of consola is available: 3.0.1");
+    c.success("Project built!");
+    c.err("This is an example error. Everything is not fine!");
+    c.box("I am a simple box");
 }
